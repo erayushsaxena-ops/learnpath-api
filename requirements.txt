@@ -5,3 +5,4 @@ joblib
 numpy
 gunicorn
 flask-cors
+requests
