@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
+import requests
 import joblib, pandas as pd, os
-
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 model = joblib.load(os.path.join(BASE_DIR, "learnpath_model.pkl"))
 le    = joblib.load(os.path.join(BASE_DIR, "label_encoder.pkl"))
